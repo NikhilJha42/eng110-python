@@ -1,19 +1,27 @@
-import random
+list_of_nums = [i for i in range(1, 101)]
 
-random.seed()
+x_userinput = input("Pick a number between 1 and 100:")
+y_userinput = input("Pick a second number between 1 and 100:")
 
-list_of_nums = [random.randint(1, 1001) for i in range(1, 11)]
-print(list_of_nums)
+valid_inputs = False
 
-num_factor_1 = 3
-num_factor_2 = 5
-num_factor_product = num_factor_1*num_factor_2
+while valid_inputs == False:
+    if x_userinput.isdigit() and y_userinput.isdigit():
+        valid_inputs = True
+    else:
+        print("Please pick valid numbers:")
+        x_userinput = input("Pick a number between 1 and 100:")
+        y_userinput = input("Pick a second number between 1 and 100:")
+
+x = int(x_userinput)
+y = int(y_userinput)
+xy_product = x*y
 for num in list_of_nums:
-    if num % num_factor_product == 0:
+    if num % xy_product == 0:
         print(num, "Fizzbuzz!")
-    elif num % num_factor_1 == 0:
+    elif num % x == 0:
         print(num, "Fizz")
-    elif num % num_factor_2 == 0:
+    elif num % y == 0:
         print(num, "Buzz")
     else:
         print(num)
