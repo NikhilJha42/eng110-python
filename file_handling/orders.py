@@ -14,10 +14,22 @@ def  open_and_print_file(file):
         #
         # opened_file.close()
 
-    except FileNameNotFoundError:
+    except FileNotFoundError:
         print("File cannot be found or directory is wrong")
         raise
     finally:
-        print("\n--Execution complete")
+        print("\n--Execution complete\n")
+
+def write_to_file(file, order_item):
+    try:
+        with open(file, "a") as file:
+            file.write(order_item + '\n')
+    except FileNotFoundError:
+        print("File not found")
+        raise
+    finally:
+        print("\n--Execution complete\n")
+
+write_to_file("orders.txt", "This works?")
 
 open_and_print_file("orders.txt")
