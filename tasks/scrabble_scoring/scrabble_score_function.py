@@ -3,13 +3,14 @@ alphabet = {"A": 1, "B": 3, "C": 3, "D": 2, "E": 1, "F": 4, "G": 2, "H": 3,
             "Q": 10, "R": 1, "S": 1, "T": 1, "U": 1, "V": 4, "W": 4, "X": 8,
             "Y": 4, "Z": 10}
 
-word = input("Please input your word here:").upper()
-
-score = 0
+user_word = input("Please input your word here:").upper()
 
 alphabet_letters = list(alphabet.keys())
 
-for letter in word:
-    score += alphabet[letter]
+def scrabble_score(word):
+    score = 0
+    for letter in word:
+        score += alphabet[letter]
+    return score
 
-print(score)
+print(scrabble_score(user_word))
