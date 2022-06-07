@@ -1,10 +1,9 @@
-from simple_calc import SimpleCalc
-
 import unittest
+import simple_calc
 
 class Calctests(unittest.TestCase):
 
-    calc = SimpleCalc()
+    calc = simple_calc.SimpleCalc()
 
     def test_add(self):
         self.assertEqual(self.calc.add(2, 4), 6)
