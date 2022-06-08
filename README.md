@@ -161,5 +161,5 @@ You can find further examples of file handling and importing packages with the f
 [Requests APIs](APIs)
 
 ### [Testing](Testing)
-The above link will take you to the directory covering unit testing - this uses classes, so you may wish to cover OOP in Python 
-before doing this. 
+The above link will take you to the directory covering unit testing - this uses classes, so you may wish to cover 
+[OOP in Python](https://github.com/NikhilJha42/eng110-python-oop) before doing this. 
