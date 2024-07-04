@@ -1,4 +1,4 @@
-# eng110-python
+# Python
 
 ## This is a repository created for learning Python 3.
 
